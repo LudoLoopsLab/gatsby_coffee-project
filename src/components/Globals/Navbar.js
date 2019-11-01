@@ -1,12 +1,12 @@
 import React, { Component } from "react";
 import { Link } from "gatsby";
 import logo from "../../images/logo.svg";
-import { faCartArrowDown, FaCartArrowDown } from "react-icons/fa";
+import { FaCartArrowDown } from "react-icons/fa";
 
 export default class Navbar extends Component {
   state = {
     navbarOpen: false,
-    css: "collapse navbar-collapse",
+    css: "collapse navbar-collapse ",
     links: [
       {
         id: 1,
@@ -22,10 +22,7 @@ export default class Navbar extends Component {
   };
   navbarHandler = () => {
     this.state.navbarOpen
-      ? this.setState({
-          navbarOpen: false,
-          css: "collapse navbar-collapse"
-        })
+      ? this.setState({ navbarOpen: false, css: "collapse navbar-collapse" })
       : this.setState({
           navbarOpen: true,
           css: "collapse navbar-collapse show"
@@ -38,7 +35,7 @@ export default class Navbar extends Component {
           <img src={logo} alt="logo" />
           {/* https://www.iconfinder.com/icons/185113/coffee_streamline_icon
 Creative Commons (Attribution 3.0 Unported);
-https://www.iconfinder.com/webalys  */}
+https://www.iconfinder.com/webalys */}
         </Link>
         <button
           className="navbar-toggler"
@@ -47,7 +44,6 @@ https://www.iconfinder.com/webalys  */}
         >
           <span className="navbar-toggler-icon" />
         </button>
-
         <div className={this.state.css}>
           <ul className="navbar-nav mx-auto">
             {this.state.links.map(link => {

@@ -4,12 +4,12 @@ import { StaticQuery, graphql } from "gatsby";
 
 import "./bootstrap.min.css";
 import "./layout.css";
-import Navbar from "./Globals/Navbar";
 
+import Navbar from "./Globals/Navbar";
 const Layout = ({ children }) => (
   <>
     <Navbar />
-    {children}{" "}
+    {children}
   </>
 );
 
